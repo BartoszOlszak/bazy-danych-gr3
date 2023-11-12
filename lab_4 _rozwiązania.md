@@ -18,7 +18,7 @@ insert into postac values(default, "Tesciowa", "kobieta","1656-11-22",231);
 ```sql
 update postac set wiek=88 where nazwa="Tesciowa";
 ```
-2.Zadanie 2
+2. **Zadanie 2**
 ```sql
 create table walizka (
 id_walizki int primary key auto_increment,
@@ -33,16 +33,41 @@ alter table walizka alter kolor set default "rozowy"
 ```sql
 insert into walizka values(default, 20, "czerwony", 1);
 insert into walizka values(default, 15, default, 3);
-**Listing 1** -> pogrubienie  
-_Listing 2_ -> podkreślenie
-
-**_Listing 3_**
-
-Poniżej to blok kodu.
-```sql
-SELECT * FROM osoba;
 ```
-Kod umieszczany liniowo. Polecenie `SELECT` oznacza wybranie danych z bazy.
+3. **Zadanie 3**
+
+```sql
+create table izba (
+adres_budynku varchar(100),
+nazwa_izby varchar(100),
+metraz int unsigned,
+wlasciciel int,
+primary key(adres_budynku, nazwa_izby),
+foreign key(wlasciciel) references postac(id_postaci) on delete set null);
+```
+```sql
+ALTER TABLE izba ADD COLUMN kolor VARCHAR(20) DEFAULT "czarny" AFTER metraz;
+```
+```sql
+insert into izba values("skandy 12", "spizarnia", 100, default, 1);
+```
+4. **Zadanie 4**
+
+```sql
+create table przetwory (
+id_przetworu int primary key,
+rok_produkcji int default 1654,
+id_wykonawcy int,
+zawartosc varchar(255),
+dodatek varchar(50) default "papryczka chilli",
+id_konsumenta int,
+foreign key(id_wykonawcy) references postac(id_postaci),
+foreign key(id_konsumenta) references postac(id_postaci));
+```
+```sql
+insert into przetwory values (1, default, 1, "bigos", default, 3);
+```
+
 
 
 
