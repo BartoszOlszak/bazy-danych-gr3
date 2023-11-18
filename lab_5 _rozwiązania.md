@@ -45,7 +45,7 @@ alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena');
 ```
 
 **Pkt c**
-```
+```sql
 insert into postac values('17763874644', 0, 'Getruda Nieszczera', 'syrena', '1620-04-21', 140, default, default);
 ```
 
