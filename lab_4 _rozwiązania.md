@@ -38,7 +38,7 @@ foreign key(id_wlasciciela) references postac(id_postaci) on delete cascade);
 
   **2.2**
 ```sql
-alter table walizka alter kolor set default "rozowy"
+alter table walizka alter kolor set default "rozowy";
 ```
 
   **2.3**
