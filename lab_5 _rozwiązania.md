@@ -30,7 +30,7 @@ alter table postac drop primary key;
 
 
 
-**2. zadanie 2 
+**2. zadanie 2 **
 
 **Pkt a**
 ```sql
