@@ -151,3 +151,6 @@ insert into zwierz select id_postaci, nazwa, wiek from postac where rodzaj = ('p
 insert into zwierz select id_postaci, nazwa, wiek from postac where rodzaj = ('syrena');
 insert into zwierz select id_postaci, nazwa, wiek from postac where rodzaj = ('wąż');
 
+
+POPRAWIC PLIK, WEJSCIOWKA Z LAB 5
+
