@@ -66,7 +66,7 @@ select distinct rodzaj from zasob where rodzaj is not null;
 
 **Pkt 4.2**
 ```sql
-select concat(nazwa,' ', rodzaj) from kreatura where rodzaj like 'wi%'; #concat() laczy wartosci
+select concat(nazwa,' ', rodzaj) from kreatura where rodzaj like 'wi%';
 ```
 
 **Pkt 4.3**
