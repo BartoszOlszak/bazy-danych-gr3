@@ -88,7 +88,7 @@ select * from zasob where rodzaj is null;
 
 **Pkt 5.3**
 ```sql
-select distinct rodzaj from zasob where nazwa like 'Ba%' or nazwa like '%a' and rodzaj is not null order by rodzaj asc;
+select distinct rodzaj from zasob where nazwa like 'Ba%' or nazwa like '%os' and rodzaj is not null order by rodzaj asc;
 ```
 
 
