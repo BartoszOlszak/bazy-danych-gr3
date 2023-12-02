@@ -61,7 +61,7 @@ select * from kreatura where dataur is not null order by dataUr asc limit 5;
 
 **Pkt 4.1**
 ```sql
-select distinct rodzaj from zasob where rodzaj is not null;
+select distinct rodzaj from zasob; # opcjonalnie dodac - where rodzaj is not null 
 ```
 
 **Pkt 4.2**
