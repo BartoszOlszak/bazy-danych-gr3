@@ -20,7 +20,7 @@ select * from zasob where rodzaj='jedzenie';
 
 **Pkt 1.4**
 ```sql
-select nazwa from kreatura where idKreatury in (1, 3, 5);
+select idZasobu, ilosc from zasob where idZasobu in (1, 3, 5);
 ```
 
 **2. Zadanie 2**
@@ -30,7 +30,7 @@ select nazwa from kreatura where idKreatury in (1, 3, 5);
 select * from kreatura where rodzaj !='wiedzma' and udzwig >= 50;
 ```
 
-**Pkt 2.1**
+**Pkt 2.2**
 ```sql
 select * from zasob where waga between 2 and 5;
 ```
