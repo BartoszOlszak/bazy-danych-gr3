@@ -20,7 +20,7 @@ select * from zasob where rodzaj='jedzenie';
 
 **Pkt 1.4**
 ```sql
-select nazwa from kreatura where idKreatury in (1, 3, 5); # nie dokonczone
+select nazwa from kreatura where idKreatury in (1, 3, 5);
 ```
 
 **2. Zadanie 2**
