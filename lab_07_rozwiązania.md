@@ -33,7 +33,7 @@ select rodzaj, count(distinct nazwa) as ile from zasob  group by rodzaj having m
 # w tym przypadku jeżeli jakiś rodzaj zasobu posiada nazwę z ilością 1, cały rodzaj nie jest wyświetlany
 
 select rodzaj, count(distinct nazwa) as ile from zasob where ilosc > 1 group by rodzaj;
-# w tym przypadku tylko dana nazwa się nie wlicza
+# w tym przypadku tylko dana nazwa się nie wlicza do ostatecznego wyniku, a sam rodzaj jest wyswietlany
 ```
 
 **3. Zadanie 3**
