@@ -39,12 +39,13 @@ inner join kreatura k on k.idkreatury = w.kierownik order by w.data_rozpoczecia,
 
 **Pkt 3.1**
 ```sql
-
+select s.nazwa, count(e.sektor) as ile_odwiedzany from etapy_wyprawy e right join sektor s on e.sektor=s.id_sektora group by s.nazwa;
 ```
 
 **Pkt 3.2**
 ```sql
-
+select k.nazwa, if(count(u.id_wyprawy)=0,'nie brał udziału w wyprawie','brał udział w wyprawie') as czy_brał_udział
+from kreatura k left join uczestnicy u on k.idkreatury=u.id_uczestnika group by k.nazwa;
 ```
 
 
@@ -52,12 +53,14 @@ inner join kreatura k on k.idkreatury = w.kierownik order by w.data_rozpoczecia,
 
 **Pkt 4.1**
 ```sql
-
+select idwyprawy, sum(length(dziennik)) from etapy_wyprawy group by idwyprawy having sum(length(dziennik)) < 400;
 ```
 
 **Pkt 4.2**
 ```sql
-
+select w.id_wyprawy, sum(e.ilosc*z.waga)/count(distinct u.id_uczestnika) as waga_ekwipunku from kreatura k 
+inner join uczestnicy u on u.id_uczestnika=k.idkreatury inner join wyprawa w on u.id_wyprawy=w.id_wyprawy 
+inner join ekwipunek e on e.idkreatury=k.idkreatury inner join zasob z on e.idzasobu= z.idzasobu group by w.id_wyprawy; # moze policzyc
 ```
 
 
