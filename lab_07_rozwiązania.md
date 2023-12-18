@@ -51,9 +51,7 @@ inner join zasob z on z.idzasobu = e.idzasobu;
 
 **Pkt 3.3**
 ```sql
-select * from kreatura k left join ekwipunek e on k.idkreatury = e.idkreatury where e.idkreatury is null; # poprawne
-
-select k.idkreatury, e.idkreatury from kreatura k left join ekwipunek e on k.idkreatury = e.idkreatury;
+select * from kreatura k left join ekwipunek e on k.idkreatury = e.idkreatury where e.idkreatury is null;
 ```
 
 **4. Zadanie 4**
