@@ -60,7 +60,7 @@ select idwyprawy, sum(length(dziennik)) from etapy_wyprawy group by idwyprawy ha
 ```sql
 select w.id_wyprawy, sum(e.ilosc*z.waga)/count(distinct u.id_uczestnika) as waga_ekwipunku from kreatura k 
 inner join uczestnicy u on u.id_uczestnika=k.idkreatury inner join wyprawa w on u.id_wyprawy=w.id_wyprawy 
-inner join ekwipunek e on e.idkreatury=k.idkreatury inner join zasob z on e.idzasobu= z.idzasobu group by w.id_wyprawy; # moze policzyc
+inner join ekwipunek e on e.idkreatury=k.idkreatury inner join zasob z on e.idzasobu= z.idzasobu group by w.id_wyprawy;
 ```
 
 
