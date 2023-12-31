@@ -25,8 +25,7 @@ inner join ekwipunek e on u.id_uczestnika = e.idkreatury group by w.nazwa;
 **Pkt 2.1**
 ```sql
 select w.nazwa, count(*) as liczba, group_concat(k.nazwa separator ' | ') as nazwy from wyprawa w
-inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy
-inner join kreatura k on u.id_uczestnika = k.idkreatury group by nazwa;
+inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy inner join kreatura k on u.id_uczestnika = k.idkreatury group by nazwa;
 ```
 
 **Pkt 2.2**
