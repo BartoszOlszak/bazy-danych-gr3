@@ -15,8 +15,8 @@ select k.nazwa from kreatura k left join uczestnicy u on k.idkreatury = u.id_ucz
 
 **Pkt 1.3**
 ```sql
-select w.nazwa, sum(e.ilosc) from wyprawa w inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy inner join ekwipunek e on u.id_uczestnika = e.idkreatury
-group by w.nazwa; 
+select w.nazwa, sum(e.ilosc) from wyprawa w inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy
+inner join ekwipunek e on u.id_uczestnika = e.idkreatury group by w.nazwa; 
 ```
 
 
