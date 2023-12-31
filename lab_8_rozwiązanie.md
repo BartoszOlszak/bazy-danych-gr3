@@ -24,14 +24,15 @@ inner join ekwipunek e on u.id_uczestnika = e.idkreatury group by w.nazwa;
 
 **Pkt 2.1**
 ```sql
-select w.nazwa, count(*) as liczba, group_concat(k.nazwa separator ' | ') as nazwy from wyprawa w inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy
+select w.nazwa, count(*) as liczba, group_concat(k.nazwa separator ' | ') as nazwy from wyprawa w
+inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy
 inner join kreatura k on u.id_uczestnika = k.idkreatury group by nazwa;
 ```
 
 **Pkt 2.2**
 ```sql
-select e.idwyprawy, e.idetapu, s.nazwa as nazwa_sektoru, k.nazwa as kierownik, w.data_rozpoczecia, e.kolejnosc from etapy_wyprawy e 
-inner join sektor s on e.sektor = s.id_sektora inner join wyprawa w on e.idwyprawy = w.id_wyprawy
+select e.idwyprawy, e.idetapu, s.nazwa as nazwa_sektoru, k.nazwa as kierownik, w.data_rozpoczecia, e.kolejnosc
+from etapy_wyprawy e  inner join sektor s on e.sektor = s.id_sektora inner join wyprawa w on e.idwyprawy = w.id_wyprawy
 inner join kreatura k on k.idkreatury = w.kierownik order by w.data_rozpoczecia, e.kolejnosc;
 ```
 
@@ -39,7 +40,8 @@ inner join kreatura k on k.idkreatury = w.kierownik order by w.data_rozpoczecia,
 
 **Pkt 3.1**
 ```sql
-select s.nazwa, count(e.sektor) as ile_odwiedzany from etapy_wyprawy e right join sektor s on e.sektor=s.id_sektora group by s.nazwa;
+select s.nazwa, count(e.sektor) as ile_odwiedzany from etapy_wyprawy e
+right join sektor s on e.sektor=s.id_sektora group by s.nazwa;
 ```
 
 **Pkt 3.2**
