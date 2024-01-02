@@ -69,5 +69,6 @@ inner join ekwipunek e on e.idkreatury=k.idkreatury inner join zasob z on e.idza
 
 **Pkt 5.1**
 ```sql
-
+select k.nazwa, w.nazwa, datediff(w.data_rozpoczecia, k.dataur) as wiek from kreatura k inner join uczestnicy u on k.idkreatury = u.id_uczestnika 
+inner join wyprawa w on u.id_wyprawy = w.id_wyprawy inner join etapy_wyprawy ew on u.id_wyprawy = ew.idwyprawy where ew.sektor = 7;
 ```
