@@ -35,7 +35,7 @@ inner join kreatura k on k.idkreatury = w.kierownik where id_wyprawy=old.id_wypr
 END
 //
 
-# nie dokonczone, przetestuj, bedzie trigger, procedury i funkcje opuszczone, sproboj z before delete
+# nie dokonczone, przetestuj, bedzie trigger, procedury i funkcje opuszczone, sproboj z before delete, kolokwium 2 tygodnie, lab 6 nie bedzie
 # insert - new
 # update - new old 
 # delete - old
