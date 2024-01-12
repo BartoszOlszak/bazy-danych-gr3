@@ -54,7 +54,8 @@ from kreatura k left join uczestnicy u on k.idkreatury=u.id_uczestnika group by 
 
 **Pkt 4.1**
 ```sql
-select idwyprawy, sum(length(dziennik)) from etapy_wyprawy group by idwyprawy having sum(length(dziennik)) < 400;
+select w.nazwa, sum(length(ew.dziennik)) from etapy_wyprawy ew inner join wyprawa w on w.id_wyprawy=ew.idwyprawy
+group by nazwa having sum(length(ew.dziennik)) < 400;
 ```
 
 **Pkt 4.2**
